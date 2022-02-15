@@ -66,9 +66,9 @@ Feature: Login Functionality
     When Click the Forgot password? link
     Then Verify that user should able to see Reset Password button
 
-    Scenario: User can see valid placeholders on Username and Password fields
-      Given the user is on the login page
-      Then Verify that user should able to see valid placeholders on Username and Password fields
+  Scenario: User can see valid placeholders on Username and Password fields
+    Given the user is on the login page
+    Then Verify that user should able to see valid placeholders on Username and Password fields
 
 
 

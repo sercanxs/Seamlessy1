@@ -59,12 +59,16 @@ Feature: Login Functionality
       | username    | password    |
       | Employee143 | Employee133 |
 
-  @190
+
   Scenario: User can see the "Forgot password?" link on the login page and can see the "Reset Password" button
     Given the user is on the login page
     Then Verify that user should able to see Forgot password? link
     When Click the Forgot password? link
     Then Verify that user should able to see Reset Password button
+@190
+    Scenario: User can see valid placeholders on Username and Password fields
+      Given the user is on the login page
+      Then Verify that user should able to see valid placeholders on Username and Password fields
 
 
 

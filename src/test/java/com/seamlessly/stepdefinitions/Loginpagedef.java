@@ -112,6 +112,20 @@ public class Loginpagedef {
         Assert.assertTrue("reset password button isn't displayed",loginPage.resetpasswordbutton.isDisplayed());
 
     }
+    @Then("Verify that user should able to see valid placeholders on Username and Password fields")
+    public void verify_that_user_should_able_to_see_valid_placeholders_on_Username_and_Password_fields() {
+
+        LoginPage loginPage = new LoginPage();
+        String text ="sadsa";
+        loginPage.usernameinput.sendKeys(text);
+
+        Assert.assertTrue("there is something wrong with the valid placeholders",loginPage.usernameinput.getAttribute("value").equals(text));
+
+        loginPage.passwordinput.sendKeys(text);
+        Assert.assertTrue("there is something wrong with the valid placeholders",loginPage.passwordinput.getAttribute("value").equals(text));
+
+    }
+
 
 
 

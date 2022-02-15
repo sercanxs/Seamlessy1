@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "User can see the \"Forgot password?\" link on the login page and can see the \"Reset Password\" button",
+  "name": "User can see valid placeholders on Username and Password fields",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -36,31 +36,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify that user should able to see Forgot password? link",
+  "name": "Verify that user should able to see valid placeholders on Username and Password fields",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_Forgot_password_link()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click the Forgot password? link",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_Forgot_password_link()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Verify that user should able to see Reset Password button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_Reset_Password_button()"
+  "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_valid_placeholders_on_Username_and_Password_fields()"
 });
 formatter.result({
   "status": "passed"

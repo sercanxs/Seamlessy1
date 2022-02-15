@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-02-15T09:02:40.180Z",
+        "start_timestamp": "2022-02-15T09:11:41.487Z",
         "before": [
           {
             "result": {
-              "duration": 17297411500,
+              "duration": 14871096700,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 63,
-        "name": "User can see the \"Forgot password?\" link on the login page and can see the \"Reset Password\" button",
+        "line": 69,
+        "name": "User can see valid placeholders on Username and Password fields",
         "description": "",
-        "id": "login-functionality;user-can-see-the-\"forgot-password?\"-link-on-the-login-page-and-can-see-the-\"reset-password\"-button",
+        "id": "login-functionality;user-can-see-valid-placeholders-on-username-and-password-fields",
         "after": [
           {
             "result": {
-              "duration": 794099100,
+              "duration": 763443500,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 4528076100,
+              "duration": 3882357600,
               "status": "passed"
             },
-            "line": 64,
+            "line": 70,
             "name": "the user is on the login page",
             "match": {
               "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_is_on_the_login_page()"
@@ -47,37 +47,13 @@
           },
           {
             "result": {
-              "duration": 60913900,
+              "duration": 260143800,
               "status": "passed"
             },
-            "line": 65,
-            "name": "Verify that user should able to see Forgot password? link",
+            "line": 71,
+            "name": "Verify that user should able to see valid placeholders on Username and Password fields",
             "match": {
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_Forgot_password_link()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 83492900,
-              "status": "passed"
-            },
-            "line": 66,
-            "name": "Click the Forgot password? link",
-            "match": {
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_Forgot_password_link()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 370297800,
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "Verify that user should able to see Reset Password button",
-            "match": {
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_Reset_Password_button()"
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_valid_placeholders_on_Username_and_Password_fields()"
             },
             "keyword": "Then "
           }

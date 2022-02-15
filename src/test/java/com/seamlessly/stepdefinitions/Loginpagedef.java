@@ -46,8 +46,8 @@ public class Loginpagedef {
     @Then("Click the right top profil icon")
     public void click_the_right_top_profil_icon() {
 
-       SeamlesslyPages sp = new SeamlesslyPages();
-       sp.clickprofilicon();
+        SeamlesslyPages sp = new SeamlesslyPages();
+        sp.clickprofilicon();
 
 
     }
@@ -66,24 +66,26 @@ public class Loginpagedef {
         loginPage.wronginputs(string);
 
     }
+
     @Then("Verify that empty username or password warning should be displayed {string} {string}{string}")
     public void verify_that_empty_username_or_password_warning_should_be_displayed(String expected, String name, String password) {
-       LoginPage loginPage = new LoginPage();
-       loginPage.emptyinputs(expected, name, password);
+        LoginPage loginPage = new LoginPage();
+        loginPage.emptyinputs(expected, name, password);
     }
+
     @Then("Verify that user should able to see password in dot format")
     public void verify_that_user_should_able_to_see_password_in_dot_format() {
-     LoginPage loginPage = new LoginPage();
+        LoginPage loginPage = new LoginPage();
         String dottype = loginPage.passwordinput.getAttribute("type");
 
-        Assert.assertTrue("passwords isn't written in dot format",dottype.equals("password"));
+        Assert.assertTrue("passwords isn't written in dot format", dottype.equals("password"));
     }
+
     @When("Click the eye")
     public void click_the_eye() {
 
 
-
-       Driver.get().findElement(By.xpath("//p[@class='groupbottom']/a/img")).click();
+        Driver.get().findElement(By.xpath("//p[@class='groupbottom']/a/img")).click();
     }
 
     @When("Click the Forgot password? link")
@@ -97,39 +99,36 @@ public class Loginpagedef {
         LoginPage loginPage = new LoginPage();
         String dottype = loginPage.passwordinput.getAttribute("type");
 
-        Assert.assertTrue("passwords isn't written in dot format",dottype.equals("text"));
+        Assert.assertTrue("passwords isn't written in dot format", dottype.equals("text"));
     }
+
     @Then("Verify that user should able to see Forgot password? link")
     public void verify_that_user_should_able_to_see_Forgot_password_link() {
 
         LoginPage loginPage = new LoginPage();
-       Assert.assertTrue("forgot password link is'nt displayed",loginPage.forgotpasswordlink.isDisplayed());
+        Assert.assertTrue("forgot password link is'nt displayed", loginPage.forgotpasswordlink.isDisplayed());
     }
 
     @Then("Verify that user should able to see Reset Password button")
     public void verify_that_user_should_able_to_see_Reset_Password_button() {
         LoginPage loginPage = new LoginPage();
-        Assert.assertTrue("reset password button isn't displayed",loginPage.resetpasswordbutton.isDisplayed());
+        Assert.assertTrue("reset password button isn't displayed", loginPage.resetpasswordbutton.isDisplayed());
 
     }
+
     @Then("Verify that user should able to see valid placeholders on Username and Password fields")
     public void verify_that_user_should_able_to_see_valid_placeholders_on_Username_and_Password_fields() {
 
         LoginPage loginPage = new LoginPage();
-        String text ="sadsa";
+        String text = "sadsa";
         loginPage.usernameinput.sendKeys(text);
 
-        Assert.assertTrue("there is something wrong with the valid placeholders",loginPage.usernameinput.getAttribute("value").equals(text));
+        Assert.assertTrue("there is something wrong with the valid placeholders", loginPage.usernameinput.getAttribute("value").equals(text));
 
         loginPage.passwordinput.sendKeys(text);
-        Assert.assertTrue("there is something wrong with the valid placeholders",loginPage.passwordinput.getAttribute("value").equals(text));
+        Assert.assertTrue("there is something wrong with the valid placeholders", loginPage.passwordinput.getAttribute("value").equals(text));
 
     }
-
-
-
-
-
 
 
 }

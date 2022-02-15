@@ -46,7 +46,7 @@ Feature: Login Functionality
       | username    | password    |
       | Employee143 | Employee133 |
 
-  @190
+
   Scenario Outline: User can see the password explicitly if needed
     Given the user is on the login page
     When the user enters the "<username>" "<password>"
@@ -58,3 +58,13 @@ Feature: Login Functionality
     Examples:
       | username    | password    |
       | Employee143 | Employee133 |
+
+
+  Scenario: User can see the "Forgot password?" link on the login page and can see the "Reset Password" button
+    Given the user is on the login page
+    Then Verify that user should able to see Forgot password? link
+    When Click the Forgot password? link
+    Then Verify that user should able to see Reset Password button
+
+
+

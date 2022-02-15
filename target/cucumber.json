@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-02-15T08:46:07.585Z",
+        "start_timestamp": "2022-02-15T09:02:40.180Z",
         "before": [
           {
             "result": {
-              "duration": 19019404800,
+              "duration": 17297411500,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 60,
-        "name": "User can see the password explicitly if needed",
+        "line": 63,
+        "name": "User can see the \"Forgot password?\" link on the login page and can see the \"Reset Password\" button",
         "description": "",
-        "id": "login-functionality;user-can-see-the-password-explicitly-if-needed;;2",
+        "id": "login-functionality;user-can-see-the-\"forgot-password?\"-link-on-the-login-page-and-can-see-the-\"reset-password\"-button",
         "after": [
           {
             "result": {
-              "duration": 789194300,
+              "duration": 794099100,
               "status": "passed"
             },
             "match": {
@@ -31,14 +31,14 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 4789342600,
+              "duration": 4528076100,
               "status": "passed"
             },
-            "line": 51,
+            "line": 64,
             "name": "the user is on the login page",
             "match": {
               "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_is_on_the_login_page()"
@@ -47,47 +47,37 @@
           },
           {
             "result": {
-              "duration": 211457100,
+              "duration": 60913900,
               "status": "passed"
             },
-            "line": 52,
-            "name": "the user enters the \"Employee143\" \"Employee133\"",
+            "line": 65,
+            "name": "Verify that user should able to see Forgot password? link",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"Employee143\"",
-                  "offset": 20
-                },
-                {
-                  "val": "\"Employee133\"",
-                  "offset": 34
-                }
-              ],
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_enters_the(java.lang.String,java.lang.String)"
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_Forgot_password_link()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 83492900,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "Click the Forgot password? link",
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_Forgot_password_link()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 111532700,
+              "duration": 370297800,
               "status": "passed"
             },
-            "line": 53,
-            "name": "Click the eye",
+            "line": 67,
+            "name": "Verify that user should able to see Reset Password button",
             "match": {
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_eye()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 64135200,
-              "status": "passed"
-            },
-            "line": 54,
-            "name": "Verify that should able to see password explicitly",
-            "match": {
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_should_able_to_see_password_explicitly()"
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_Reset_Password_button()"
             },
             "keyword": "Then "
           }

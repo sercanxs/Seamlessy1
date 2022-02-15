@@ -15,6 +15,10 @@ public class LoginPage {
     public WebElement passwordinput;
     @FindBy(id = "submit-form")
     public WebElement loginbutton;
+    @FindBy(id = "lost-password")
+    public WebElement forgotpasswordlink;
+    @FindBy(id = "reset-password-submit")
+    public WebElement resetpasswordbutton;
 
 
     @FindBy(xpath = "//*[@class ='warning wrongPasswordMsg']")

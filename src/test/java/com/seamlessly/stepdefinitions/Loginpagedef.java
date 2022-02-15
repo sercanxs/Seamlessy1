@@ -85,6 +85,13 @@ public class Loginpagedef {
 
        Driver.get().findElement(By.xpath("//p[@class='groupbottom']/a/img")).click();
     }
+
+    @When("Click the Forgot password? link")
+    public void click_the_Forgot_password_link() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.forgotpasswordlink.click();
+    }
+
     @Then("Verify that should able to see password explicitly")
     public void verify_that_should_able_to_see_password_explicitly() {
         LoginPage loginPage = new LoginPage();
@@ -92,6 +99,20 @@ public class Loginpagedef {
 
         Assert.assertTrue("passwords isn't written in dot format",dottype.equals("text"));
     }
+    @Then("Verify that user should able to see Forgot password? link")
+    public void verify_that_user_should_able_to_see_Forgot_password_link() {
+
+        LoginPage loginPage = new LoginPage();
+       Assert.assertTrue("forgot password link is'nt displayed",loginPage.forgotpasswordlink.isDisplayed());
+    }
+
+    @Then("Verify that user should able to see Reset Password button")
+    public void verify_that_user_should_able_to_see_Reset_Password_button() {
+        LoginPage loginPage = new LoginPage();
+        Assert.assertTrue("reset password button isn't displayed",loginPage.resetpasswordbutton.isDisplayed());
+
+    }
+
 
 
 

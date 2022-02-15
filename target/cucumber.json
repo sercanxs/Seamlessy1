@@ -1,0 +1,92 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2022-02-15T06:31:43.228Z",
+        "line": 17,
+        "name": "Login with valid credentials",
+        "description": "",
+        "id": "login-functionality;login-with-valid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6,
+            "name": "the user enters the \"Employee141\" \"Employee123\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "Click the login button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "verify that user should able to lands on the dashboard page",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "Click the right top profil icon",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "verify that username should be seen under profil icon as expected",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@190"
+          }
+        ]
+      }
+    ],
+    "name": "Login Functionality",
+    "description": "",
+    "id": "login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/login.feature",
+    "tags": [
+      {
+        "name": "@190",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

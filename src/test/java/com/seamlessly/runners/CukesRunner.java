@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
                 "html:target/default-html-reports",
                 "rerun:target/rerun.txt"},
         features = "src/test/resources/features",
-        glue = "com/zerobank/stepdefinitions",
-        dryRun = true,
+        glue = "com/seamlessly/stepdefinitions",
+        dryRun = false,
         tags = "@190"
 )
 public class CukesRunner {

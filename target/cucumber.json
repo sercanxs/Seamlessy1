@@ -3,66 +3,128 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-02-15T06:31:43.228Z",
+        "start_timestamp": "2022-02-15T07:17:56.900Z",
+        "before": [
+          {
+            "result": {
+              "duration": 14474572200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
         "line": 17,
         "name": "Login with valid credentials",
         "description": "",
         "id": "login-functionality;login-with-valid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 826561700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 3933490800,
+              "status": "passed"
             },
             "line": 5,
             "name": "the user is on the login page",
-            "match": {},
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_is_on_the_login_page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 185506000,
+              "status": "passed"
             },
             "line": 6,
             "name": "the user enters the \"Employee141\" \"Employee123\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Employee141\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"Employee123\"",
+                  "offset": 34
+                }
+              ],
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_enters_the(java.lang.String,java.lang.String)"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 4399415900,
+              "status": "passed"
             },
             "line": 7,
             "name": "Click the login button",
-            "match": {},
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_login_button()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 11966600,
+              "status": "passed"
             },
             "line": 8,
-            "name": "verify that user should able to lands on the dashboard page",
-            "match": {},
+            "name": "verify that user should able to lands on this title \"Files - Seamlessly -QA\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Files - Seamlessly -QA\"",
+                  "offset": 52
+                }
+              ],
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_lands_on_this_title(java.lang.String)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 113697800,
+              "status": "passed"
             },
             "line": 9,
             "name": "Click the right top profil icon",
-            "match": {},
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_right_top_profil_icon()"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 60835000,
+              "status": "passed"
             },
             "line": 10,
-            "name": "verify that username should be seen under profil icon as expected",
-            "match": {},
+            "name": "verify that username should be seen under profil icon as expected \"Employee141\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Employee141\"",
+                  "offset": 66
+                }
+              ],
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_username_should_be_seen_under_profil_icon_as_expected(java.lang.String)"
+            },
             "keyword": "Then "
           }
         ],

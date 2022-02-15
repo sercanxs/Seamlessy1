@@ -1,11 +1,13 @@
 package com.seamlessly.stepdefinitions;
 
 import com.seamlessly.pages.LoginPage;
+import com.seamlessly.pages.SeamlesslyPages;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Loginpagedef {
+
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
 
@@ -26,22 +28,27 @@ public class Loginpagedef {
        LoginPage loginPage = new LoginPage();
        loginPage.Loginbutton();
     }
-    @Then("verify that user should able to lands on the dashboard page")
-    public void verify_that_user_should_able_to_lands_on_the_dashboard_page() {
-
+    @Then("verify that user should able to lands on this title {string}")
+    public void verify_that_user_should_able_to_lands_on_this_title(String string) {
+        SeamlesslyPages sp = new SeamlesslyPages();
+        sp.showTitle(string);
 
 
     }
     @Then("Click the right top profil icon")
     public void click_the_right_top_profil_icon() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.clickprofilicon();
+
+
     }
-    @Then("verify that username should be seen under profil icon as expected")
-    public void verify_that_username_should_be_seen_under_profil_icon_as_expected() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("verify that username should be seen under profil icon as expected {string}")
+    public void verify_that_username_should_be_seen_under_profil_icon_as_expected(String string) {
+LoginPage loginPage = new LoginPage();
+loginPage.profiliconname(string);
     }
+
 
 
 

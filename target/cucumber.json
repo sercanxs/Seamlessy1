@@ -1,13 +1,13 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-15T07:17:56.900Z",
+        "start_timestamp": "2022-02-15T07:36:05.381Z",
         "before": [
           {
             "result": {
-              "duration": 14474572200,
+              "duration": 13846807700,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 17,
-        "name": "Login with valid credentials",
+        "line": 27,
+        "name": "User can not login with \"Wrong username or password.\"",
         "description": "",
-        "id": "login-functionality;login-with-valid-credentials;;2",
+        "id": "login-functionality;user-can-not-login-with-\"wrong-username-or-password.\";;2",
         "after": [
           {
             "result": {
-              "duration": 826561700,
+              "duration": 790664700,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3933490800,
+              "duration": 3698516200,
               "status": "passed"
             },
-            "line": 5,
+            "line": 20,
             "name": "the user is on the login page",
             "match": {
               "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_is_on_the_login_page()"
@@ -47,19 +47,19 @@
           },
           {
             "result": {
-              "duration": 185506000,
+              "duration": 186517400,
               "status": "passed"
             },
-            "line": 6,
-            "name": "the user enters the \"Employee141\" \"Employee123\"",
+            "line": 21,
+            "name": "the user enters the \"Employee143\" \"Employee133\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Employee141\"",
+                  "val": "\"Employee143\"",
                   "offset": 20
                 },
                 {
-                  "val": "\"Employee123\"",
+                  "val": "\"Employee133\"",
                   "offset": 34
                 }
               ],
@@ -69,10 +69,10 @@
           },
           {
             "result": {
-              "duration": 4399415900,
+              "duration": 2967026600,
               "status": "passed"
             },
-            "line": 7,
+            "line": 22,
             "name": "Click the login button",
             "match": {
               "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_login_button()"
@@ -81,49 +81,19 @@
           },
           {
             "result": {
-              "duration": 11966600,
+              "duration": 52880000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "verify that user should able to lands on this title \"Files - Seamlessly -QA\"",
+            "line": 23,
+            "name": "Verify that wrong username or password warning should be displayed \"Wrong username or password.\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Files - Seamlessly -QA\"",
-                  "offset": 52
+                  "val": "\"Wrong username or password.\"",
+                  "offset": 67
                 }
               ],
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_lands_on_this_title(java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 113697800,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "Click the right top profil icon",
-            "match": {
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_right_top_profil_icon()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 60835000,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "verify that username should be seen under profil icon as expected \"Employee141\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"Employee141\"",
-                  "offset": 66
-                }
-              ],
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_username_should_be_seen_under_profil_icon_as_expected(java.lang.String)"
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_wrong_username_or_password_warning_should_be_displayed(java.lang.String)"
             },
             "keyword": "Then "
           }
@@ -140,15 +110,6 @@
     "id": "login-functionality",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/login.feature",
-    "tags": [
-      {
-        "name": "@190",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "tags": []
   }
 ]

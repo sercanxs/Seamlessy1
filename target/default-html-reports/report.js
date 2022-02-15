@@ -2,17 +2,17 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "name": "Login Functionality",
   "description": "",
-  "keyword": "Feature",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "name": "User can not login with \"Wrong username or password.\"",
+  "description": "",
+  "keyword": "Scenario Outline",
   "tags": [
     {
       "name": "@190"
     }
   ]
-});
-formatter.scenarioOutline({
-  "name": "Login with valid credentials",
-  "description": "",
-  "keyword": "Scenario Outline"
 });
 formatter.step({
   "name": "the user is on the login page",
@@ -27,15 +27,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "name": "verify that user should able to lands on this title \"\u003ctitle\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "Click the right top profil icon",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "verify that username should be seen under profil icon as expected \"\u003cusername\u003e\"",
+  "name": "Verify that wrong username or password warning should be displayed \"\u003cwrong\u003e\"",
   "keyword": "Then "
 });
 formatter.examples({
@@ -47,20 +39,20 @@ formatter.examples({
       "cells": [
         "username",
         "password",
-        "title"
+        "wrong"
       ]
     },
     {
       "cells": [
-        "Employee141",
-        "Employee123",
-        "Files - Seamlessly -QA"
+        "Employee143",
+        "Employee133",
+        "Wrong username or password."
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Login with valid credentials",
+  "name": "User can not login with \"Wrong username or password.\"",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -83,7 +75,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user enters the \"Employee141\" \"Employee123\"",
+  "name": "the user enters the \"Employee143\" \"Employee133\"",
   "keyword": "When "
 });
 formatter.match({
@@ -103,31 +95,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify that user should able to lands on this title \"Files - Seamlessly -QA\"",
+  "name": "Verify that wrong username or password warning should be displayed \"Wrong username or password.\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_lands_on_this_title(java.lang.String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "Click the right top profil icon",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_right_top_profil_icon()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "verify that username should be seen under profil icon as expected \"Employee141\"",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_username_should_be_seen_under_profil_icon_as_expected(java.lang.String)"
+  "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_wrong_username_or_password_warning_should_be_displayed(java.lang.String)"
 });
 formatter.result({
   "status": "passed"

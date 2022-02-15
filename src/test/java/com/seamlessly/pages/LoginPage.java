@@ -21,6 +21,9 @@ public class LoginPage{
     @FindBy(xpath = "//nav[@id='expanddiv']/ul/li/div[@class='user-status-menu-item']/span")
     public WebElement profiliconname;
 
+    @FindBy(xpath = "//*[@class ='warning wrongPasswordMsg']")
+    public WebElement awronginputs;
+
 
     public LoginPage() {
         PageFactory.initElements(Driver.get(), this);
@@ -50,6 +53,14 @@ public class LoginPage{
 
         Assert.assertTrue("Profil icon's actual and expected name aren't equals",expected.equals(name));
 
+
+    }
+
+    public void wronginputs(String expected){
+
+        String innerHTML = awronginputs.getAttribute("innerHTML");
+
+        Assert.assertTrue("innerhtml and expected wrong username and password warnings are'nt equal ",innerHTML.contains(expected));
 
     }
 

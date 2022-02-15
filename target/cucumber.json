@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2022-02-15T08:16:47.144Z",
+        "start_timestamp": "2022-02-15T08:46:07.585Z",
         "before": [
           {
             "result": {
-              "duration": 17431362400,
+              "duration": 19019404800,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 47,
-        "name": "User can see the password in a form of dots by default",
+        "line": 60,
+        "name": "User can see the password explicitly if needed",
         "description": "",
-        "id": "login-functionality;user-can-see-the-password-in-a-form-of-dots-by-default;;2",
+        "id": "login-functionality;user-can-see-the-password-explicitly-if-needed;;2",
         "after": [
           {
             "result": {
-              "duration": 798075700,
+              "duration": 789194300,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3749785400,
+              "duration": 4789342600,
               "status": "passed"
             },
-            "line": 40,
+            "line": 51,
             "name": "the user is on the login page",
             "match": {
               "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_is_on_the_login_page()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 193225400,
+              "duration": 211457100,
               "status": "passed"
             },
-            "line": 41,
+            "line": 52,
             "name": "the user enters the \"Employee143\" \"Employee133\"",
             "match": {
               "arguments": [
@@ -69,13 +69,25 @@
           },
           {
             "result": {
-              "duration": 39893200,
+              "duration": 111532700,
               "status": "passed"
             },
-            "line": 42,
-            "name": "Verify that user should able to see password in dot format",
+            "line": 53,
+            "name": "Click the eye",
             "match": {
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_password_in_dot_format()"
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_eye()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64135200,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "Verify that should able to see password explicitly",
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_should_able_to_see_password_explicitly()"
             },
             "keyword": "Then "
           }

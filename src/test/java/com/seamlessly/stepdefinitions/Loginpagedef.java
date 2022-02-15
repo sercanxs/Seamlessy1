@@ -2,10 +2,14 @@ package com.seamlessly.stepdefinitions;
 
 import com.seamlessly.pages.LoginPage;
 import com.seamlessly.pages.SeamlesslyPages;
+import com.seamlessly.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 
 public class Loginpagedef {
 
@@ -73,6 +77,20 @@ public class Loginpagedef {
         String dottype = loginPage.passwordinput.getAttribute("type");
 
         Assert.assertTrue("passwords isn't written in dot format",dottype.equals("password"));
+    }
+    @When("Click the eye")
+    public void click_the_eye() {
+
+
+
+       Driver.get().findElement(By.xpath("//p[@class='groupbottom']/a/img")).click();
+    }
+    @Then("Verify that should able to see password explicitly")
+    public void verify_that_should_able_to_see_password_explicitly() {
+        LoginPage loginPage = new LoginPage();
+        String dottype = loginPage.passwordinput.getAttribute("type");
+
+        Assert.assertTrue("passwords isn't written in dot format",dottype.equals("text"));
     }
 
 

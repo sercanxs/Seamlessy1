@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "name": "User can see the password in a form of dots by default",
+  "name": "User can see the password explicitly if needed",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -28,7 +28,11 @@ formatter.step({
   "keyword": "When "
 });
 formatter.step({
-  "name": "Verify that user should able to see password in dot format",
+  "name": "Click the eye",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "Verify that should able to see password explicitly",
   "keyword": "Then "
 });
 formatter.examples({
@@ -51,7 +55,7 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "User can see the password in a form of dots by default",
+  "name": "User can see the password explicitly if needed",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -87,11 +91,21 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Verify that user should able to see password in dot format",
+  "name": "Click the eye",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_eye()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Verify that should able to see password explicitly",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_user_should_able_to_see_password_in_dot_format()"
+  "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_should_able_to_see_password_explicitly()"
 });
 formatter.result({
   "status": "passed"

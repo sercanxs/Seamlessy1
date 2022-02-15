@@ -32,16 +32,29 @@ Feature: Login Functionality
     Then Verify that empty username or password warning should be displayed "Please fill out this field." "<username>""<password>"
 
     Examples:
-      | username    | password    |  names        |
-      |             | Employee123 | username      |
-      | Employee141 |             | password      |
-@190
-    Scenario Outline:User can see the password in a form of dots by default
-      Given the user is on the login page
-      When the user enters the "<username>" "<password>"
-      Then Verify that user should able to see password in dot format
+      | username    | password    | names    |
+      |             | Employee123 | username |
+      | Employee141 |             | password |
+
+  Scenario Outline:User can see the password in a form of dots by default
+    Given the user is on the login page
+    When the user enters the "<username>" "<password>"
+    Then Verify that user should able to see password in dot format
 
 
-      Examples:
-        | username    | password    |
-        | Employee143 | Employee133 |
+    Examples:
+      | username    | password    |
+      | Employee143 | Employee133 |
+
+  @190
+  Scenario Outline: User can see the password explicitly if needed
+    Given the user is on the login page
+    When the user enters the "<username>" "<password>"
+    And Click the eye
+    Then Verify that should able to see password explicitly
+
+
+
+    Examples:
+      | username    | password    |
+      | Employee143 | Employee133 |

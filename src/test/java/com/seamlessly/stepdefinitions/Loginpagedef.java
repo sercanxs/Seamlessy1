@@ -61,6 +61,12 @@ public class Loginpagedef {
         loginPage.wronginputs(string);
 
     }
+    @Then("Verify that empty username or password warning should be displayed {string} {string}{string}")
+    public void verify_that_empty_username_or_password_warning_should_be_displayed(String expected, String name, String password) {
+       LoginPage loginPage = new LoginPage();
+       loginPage.emptyinputs(expected, name, password);
+    }
+
 
 
 

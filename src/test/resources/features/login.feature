@@ -22,3 +22,15 @@ Feature: Login Functionality
     Examples:
       | username    | password    | wrong                       |
       | Employee143 | Employee133 | Wrong username or password. |
+
+  @190
+  Scenario Outline: User can not login with <names> as empty
+    Given the user is on the login page
+    When the user enters the "<username>" "<password>"
+    And Click the login button
+    Then Verify that empty username or password warning should be displayed "Please fill out this field." "<username>""<password>"
+
+    Examples:
+      | username    | password    |  names        |
+      |             | Employee123 | username      |
+      | Employee141 |             | password      |

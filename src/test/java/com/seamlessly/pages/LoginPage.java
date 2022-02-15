@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage{
+public class LoginPage {
 
     @FindBy(id = "user")
     public WebElement usernameinput;
@@ -29,38 +29,61 @@ public class LoginPage{
         PageFactory.initElements(Driver.get(), this);
     }
 
-    public void Loginpage(){
+    public void Loginpage() {
         Driver.get().get(ConfigurationReader.get("url"));
 
 
-
     }
-    public void Enteridpassword(String username,String password){
+
+    public void Enteridpassword(String username, String password) {
         usernameinput.sendKeys(username);
         passwordinput.sendKeys(password);
 
     }
-    public void Loginbutton(){
+
+    public void Loginbutton() {
         loginbutton.click();
 
     }
-    public void clickprofilicon(){
+
+    public void clickprofilicon() {
         profilicon.click();
 
     }
-    public void profiliconname(String expected){
+
+    public void profiliconname(String expected) {
         String name = profiliconname.getAttribute("title");
 
-        Assert.assertTrue("Profil icon's actual and expected name aren't equals",expected.equals(name));
+        Assert.assertTrue("Profil icon's actual and expected name aren't equals", expected.equals(name));
 
 
     }
 
-    public void wronginputs(String expected){
+    public void wronginputs(String expected) {
 
         String innerHTML = awronginputs.getAttribute("innerHTML");
 
-        Assert.assertTrue("innerhtml and expected wrong username and password warnings are'nt equal ",innerHTML.contains(expected));
+        Assert.assertTrue("innerhtml and expected wrong username and password warnings are'nt equal ", innerHTML.contains(expected));
+
+    }
+
+    public void emptyinputs(String expected, String name, String password) {
+        if (name.isEmpty()) {
+
+            String actual = usernameinput.getAttribute("validationMessage");
+
+
+            Assert.assertTrue("empty name inputs message isn't as expected", actual.contains(expected));
+        } else if (password.isEmpty()) {
+
+            String actual = passwordinput.getAttribute("validationMessage");
+
+
+            Assert.assertTrue("empty password input message isn't as expected", actual.equals(expected));
+        } else {
+
+            Assert.assertTrue("input boxes aren't empty", false);
+        }
 
     }
 

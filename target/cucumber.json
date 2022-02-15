@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-15T07:36:05.381Z",
+        "start_timestamp": "2022-02-15T08:00:50.550Z",
         "before": [
           {
             "result": {
-              "duration": 13846807700,
+              "duration": 16342417500,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 27,
-        "name": "User can not login with \"Wrong username or password.\"",
+        "line": 35,
+        "name": "User can not login with username as empty",
         "description": "",
-        "id": "login-functionality;user-can-not-login-with-\"wrong-username-or-password.\";;2",
+        "id": "login-functionality;user-can-not-login-with-\u003cnames\u003e-as-empty;;2",
         "after": [
           {
             "result": {
-              "duration": 790664700,
+              "duration": 766986200,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3698516200,
+              "duration": 4831946300,
               "status": "passed"
             },
-            "line": 20,
+            "line": 28,
             "name": "the user is on the login page",
             "match": {
               "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_is_on_the_login_page()"
@@ -47,19 +47,129 @@
           },
           {
             "result": {
-              "duration": 186517400,
+              "duration": 178538500,
               "status": "passed"
             },
-            "line": 21,
-            "name": "the user enters the \"Employee143\" \"Employee133\"",
+            "line": 29,
+            "name": "the user enters the \"\" \"Employee123\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Employee143\"",
+                  "val": "\"\"",
                   "offset": 20
                 },
                 {
-                  "val": "\"Employee133\"",
+                  "val": "\"Employee123\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_enters_the(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 82763400,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Click the login button",
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 61835500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Verify that empty username or password warning should be displayed \"Please fill out this field.\" \"\"\"Employee123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Please fill out this field.\"",
+                  "offset": 67
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 97
+                },
+                {
+                  "val": "\"Employee123\"",
+                  "offset": 99
+                }
+              ],
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_empty_username_or_password_warning_should_be_displayed(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@190"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-02-15T08:01:12.926Z",
+        "before": [
+          {
+            "result": {
+              "duration": 15819669500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "User can not login with password as empty",
+        "description": "",
+        "id": "login-functionality;user-can-not-login-with-\u003cnames\u003e-as-empty;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 795909400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 4963602900,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 192550400,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user enters the \"Employee141\" \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Employee141\"",
+                  "offset": 20
+                },
+                {
+                  "val": "\"\"",
                   "offset": 34
                 }
               ],
@@ -69,10 +179,10 @@
           },
           {
             "result": {
-              "duration": 2967026600,
+              "duration": 73814100,
               "status": "passed"
             },
-            "line": 22,
+            "line": 30,
             "name": "Click the login button",
             "match": {
               "location": "com.seamlessly.stepdefinitions.Loginpagedef.click_the_login_button()"
@@ -81,19 +191,27 @@
           },
           {
             "result": {
-              "duration": 52880000,
+              "duration": 82768700,
               "status": "passed"
             },
-            "line": 23,
-            "name": "Verify that wrong username or password warning should be displayed \"Wrong username or password.\"",
+            "line": 31,
+            "name": "Verify that empty username or password warning should be displayed \"Please fill out this field.\" \"Employee141\"\"\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Wrong username or password.\"",
+                  "val": "\"Please fill out this field.\"",
                   "offset": 67
+                },
+                {
+                  "val": "\"Employee141\"",
+                  "offset": 97
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 110
                 }
               ],
-              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_wrong_username_or_password_warning_should_be_displayed(java.lang.String)"
+              "location": "com.seamlessly.stepdefinitions.Loginpagedef.verify_that_empty_username_or_password_warning_should_be_displayed(java.lang.String,java.lang.String,java.lang.String)"
             },
             "keyword": "Then "
           }

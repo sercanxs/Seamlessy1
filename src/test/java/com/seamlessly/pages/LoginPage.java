@@ -15,11 +15,7 @@ public class LoginPage {
     public WebElement passwordinput;
     @FindBy(id = "submit-form")
     public WebElement loginbutton;
-    @FindBy(xpath = "//div[@id='expand']/div/img")
-    public WebElement profilicon;
 
-    @FindBy(xpath = "//nav[@id='expanddiv']/ul/li/div[@class='user-status-menu-item']/span")
-    public WebElement profiliconname;
 
     @FindBy(xpath = "//*[@class ='warning wrongPasswordMsg']")
     public WebElement awronginputs;
@@ -46,18 +42,9 @@ public class LoginPage {
 
     }
 
-    public void clickprofilicon() {
-        profilicon.click();
-
-    }
-
-    public void profiliconname(String expected) {
-        String name = profiliconname.getAttribute("title");
-
-        Assert.assertTrue("Profil icon's actual and expected name aren't equals", expected.equals(name));
 
 
-    }
+
 
     public void wronginputs(String expected) {
 

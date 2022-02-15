@@ -5,6 +5,7 @@ import com.seamlessly.pages.SeamlesslyPages;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class Loginpagedef {
 
@@ -41,16 +42,16 @@ public class Loginpagedef {
     @Then("Click the right top profil icon")
     public void click_the_right_top_profil_icon() {
 
-        LoginPage loginPage = new LoginPage();
-        loginPage.clickprofilicon();
+       SeamlesslyPages sp = new SeamlesslyPages();
+       sp.clickprofilicon();
 
 
     }
 
     @Then("verify that username should be seen under profil icon as expected {string}")
     public void verify_that_username_should_be_seen_under_profil_icon_as_expected(String string) {
-        LoginPage loginPage = new LoginPage();
-        loginPage.profiliconname(string);
+        SeamlesslyPages sp = new SeamlesslyPages();
+        sp.profiliconname(string);
     }
 
 
@@ -66,6 +67,14 @@ public class Loginpagedef {
        LoginPage loginPage = new LoginPage();
        loginPage.emptyinputs(expected, name, password);
     }
+    @Then("Verify that user should able to see password in dot format")
+    public void verify_that_user_should_able_to_see_password_in_dot_format() {
+     LoginPage loginPage = new LoginPage();
+        String dottype = loginPage.passwordinput.getAttribute("type");
+
+        Assert.assertTrue("passwords isn't written in dot format",dottype.equals("password"));
+    }
+
 
 
 

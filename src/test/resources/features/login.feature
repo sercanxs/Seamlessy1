@@ -1,3 +1,4 @@
+@smoke
 Feature: Login Functionality
 
   Scenario Outline: Login with valid credentials
@@ -23,7 +24,7 @@ Feature: Login Functionality
       | username    | password    | wrong                       |
       | Employee143 | Employee133 | Wrong username or password. |
 
-  @190
+
   Scenario Outline: User can not login with <names> as empty
     Given the user is on the login page
     When the user enters the "<username>" "<password>"
@@ -34,3 +35,13 @@ Feature: Login Functionality
       | username    | password    |  names        |
       |             | Employee123 | username      |
       | Employee141 |             | password      |
+@190
+    Scenario Outline:User can see the password in a form of dots by default
+      Given the user is on the login page
+      When the user enters the "<username>" "<password>"
+      Then Verify that user should able to see password in dot format
+
+
+      Examples:
+        | username    | password    |
+        | Employee143 | Employee133 |
